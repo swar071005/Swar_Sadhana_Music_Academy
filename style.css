@@ -206,12 +206,16 @@ nav a {
 
 /* Stylish About */
 .stylish-about {
-  background: linear-gradient(to right, #fdfbfb, #ebedee);
-  padding: 60px 20px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  max-width: 800px; /* Increased width */
+  margin: 32px auto 24px auto;
+  padding: 28px 40px; /* Increased padding */
   text-align: center;
 }
 .stylish-about h2 {
-  font-size: 32px;
+  font-size: 50px; /* Increased by 3 times from 32px */
   color: #222;
   margin-bottom: 40px;
   position: relative;
@@ -229,40 +233,37 @@ nav a {
 /* Split About Section */
 .about-split {
   display: flex;
-  flex-wrap: wrap;
-  min-height: 400px;
-  background-color: #000;
-  color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
-.about-left, .about-right {
+.about-left {
   flex: 1;
-  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 .about-left img {
   width: 100%;
-  height: 100%;
+  border-radius: 10px;
+  margin-bottom: 16px;
   object-fit: cover;
-  display: block;
+}
+.about-left img:last-child {
+  margin-bottom: 0;
 }
 .about-right {
-  padding: 40px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #000;
+  flex: 2;
+  padding-left: 16px;
 }
-.about-right h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #fff;
-}
-.about-right p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #ddd;
+@media (max-width: 800px) {
+  .about-split {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-right {
+    padding-left: 0;
+  }
 }
 
 /* About Background Wrapper */
@@ -285,6 +286,12 @@ nav a {
 .about-bg > * {
   position: relative;
   z-index: 1;
+}
+.about-bg {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXGVynzivMEYFn8GKayZFybeOFtz8NLDYpDg&s');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Responsive Tweaks */
@@ -381,4 +388,17 @@ footer {
   width: 120px;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-mission h2::before,
+.about-vision h2::before {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 100vw;
+  height: 2px;
+  background: #fff;
+  margin-bottom: 18px;
+  margin-left: auto;
+  margin-right: auto;
 }
