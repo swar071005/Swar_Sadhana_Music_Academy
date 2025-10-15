@@ -1,4 +1,4 @@
-/* Reset & Base */
+/* ========== RESET & BASE ========== */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,6 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
   color: #fff;
   line-height: 1.6;
   text-align: center;
@@ -26,37 +25,45 @@ body::before {
   z-index: -1;
 }
 
-/* Header */
+/* ========== HEADER ========== */
 header {
-  /* Solid blue header for clearer branding */
-  background: #0078d7; /* primary blue */
+  background: #0078d7;
   color: white;
   padding: 40px 20px;
   text-align: center;
 }
+
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  letter-spacing: 1px;
 }
+
 header p {
   font-size: 1.2rem;
 }
 
-/* Navigation */
+/* ========== NAVIGATION ========== */
 nav {
   background-color: #f8f8f8;
-  padding: 10px 20px;
+  padding: 12px 20px;
   display: flex;
   justify-content: center;
   gap: 30px;
 }
+
 nav a {
   text-decoration: none;
   color: #0078d7;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-/* Hero Section */
+nav a:hover {
+  color: #0056a3;
+}
+
+/* ========== HERO SECTION ========== */
 .hero {
   display: flex;
   flex-direction: column;
@@ -64,28 +71,32 @@ nav a {
   padding: 60px 20px;
   background-color: #f0f4f8;
 }
+
 .hero img {
   max-width: 100%;
-  height: auto;
   border-radius: 8px;
 }
+
 .hero h2 {
   font-size: 2rem;
+  color: #222;
   margin-top: 20px;
 }
+
 .hero p {
   max-width: 600px;
-  text-align: center;
   margin-top: 10px;
+  color: #333;
 }
 
-/* Features Section */
+/* ========== FEATURES SECTION ========== */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   padding: 40px 20px;
 }
+
 .feature-box {
   background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #ddd;
@@ -93,87 +104,121 @@ nav a {
   border-radius: 8px;
   text-align: center;
   color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
 .feature-box img {
-  width: 100px;
+  width: 90px;
   margin-bottom: 15px;
 }
+
 .feature-box h3 {
   color: #0078d7;
   margin-bottom: 10px;
 }
 
-/* Call to Action */
+/* ========== CALL TO ACTION ========== */
 .cta {
   background-color: #0078d7;
   color: white;
   text-align: center;
   padding: 40px 20px;
 }
+
 .cta button {
   background-color: white;
   color: #0078d7;
   border: none;
   padding: 12px 24px;
-  font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 20px;
+  font-size: 1rem;
+  transition: 0.3s ease;
 }
+
 .cta button:hover {
   background-color: #e6f0ff;
 }
 
-/* Generic page container */
+/* ========== CONTACT PAGE STYLING ========== */
 .main {
   padding: 40px 20px;
 }
 
-/* Image Gallery */
-.image-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-.image-gallery img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-.image-gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Contact Form */
-.contact-form {
+.contact-info,
+.contact-form,
+.map {
   max-width: 600px;
-  margin: 20px auto;
+  margin: 30px auto;
+  background: #fff;
+  color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   text-align: left;
 }
+
+.contact-info h3,
+.contact-form h3,
+.map h3 {
+  color: #0078d7;
+  margin-bottom: 10px;
+}
+
+.contact-info p,
+.contact-form label {
+  font-size: 16px;
+  color: #444;
+}
+
+.contact-info a {
+  color: #0078D7;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  margin-top: 8px;
-  margin-bottom: 12px;
+  margin-top: 5px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-}
-.contact-form button {
-  background: #0078d7;
-  color: #fff;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
 }
 
-/* About Section */
+.contact-form button {
+  background-color: #0078d7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: #005fa3;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ========== ABOUT SECTION ========== */
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -181,14 +226,13 @@ nav a {
   align-items: flex-start;
   gap: 30px;
   max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
+  margin: 40px auto;
   background: #fff;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
-.about-image img,
+
 .about-container img {
   width: 100%;
   max-width: 400px;
@@ -196,7 +240,7 @@ nav a {
   margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
-.about-text p,
+
 .about-container p {
   font-size: 16px;
   line-height: 1.6;
@@ -204,118 +248,7 @@ nav a {
   margin-bottom: 15px;
 }
 
-/* Stylish About */
-.stylish-about {
-  background: rgba(255,255,255,0.92);
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  max-width: 800px; /* Increased width */
-  margin: 32px auto 24px auto;
-  padding: 28px 40px; /* Increased padding */
-  text-align: center;
-}
-.stylish-about h2 {
-  font-size: 50px; /* Increased by 3 times from 32px */
-  color: #222;
-  margin-bottom: 40px;
-  position: relative;
-}
-.stylish-about h2::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #444;
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-/* Split About Section */
-.about-split {
-  display: flex;
-  gap: 32px;
-  align-items: flex-start;
-  margin-bottom: 40px;
-}
-.about-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.about-left img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  object-fit: cover;
-}
-.about-left img:last-child {
-  margin-bottom: 0;
-}
-.about-right {
-  flex: 2;
-  padding-left: 16px;
-}
-@media (max-width: 800px) {
-  .about-split {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .about-right {
-    padding-left: 0;
-  }
-}
-
-/* About Background Wrapper */
-.about-bg {
-  min-height: 100vh;
-  background: url('images/music-bg.jpg') center/cover no-repeat fixed;
-  position: relative;
-  display: block;
-  padding: 40px 20px;
-}
-.about-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
-  z-index: 0;
-}
-.about-bg > * {
-  position: relative;
-  z-index: 1;
-}
-.about-bg {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXGVynzivMEYFn8GKayZFybeOFtz8NLDYpDg&s');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Responsive Tweaks */
-@media (max-width: 900px) {
-  .about-split {
-    flex-direction: column;
-  }
-  header h1 {
-    font-size: 2rem;
-  }
-  .hero {
-    padding: 40px 12px;
-  }
-}
-@media (max-width: 600px) {
-  .about-bg {
-    padding: 20px 12px;
-  }
-  .feature-box {
-    padding: 16px;
-  }
-}
-
-/* Footer */
+/* ========== FOOTER ========== */
 footer {
   background-color: #f0f0f0;
   text-align: center;
@@ -324,48 +257,7 @@ footer {
   color: #666;
 }
 
-.header-bg {
-  background: url('images/classical-bg.jpg') center/cover no-repeat;
-  color: #fff;
-  text-align: center;
-  padding: 60px 20px;
-  
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 40px;
-}
-
-.feature-box {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.feature-box:hover {
-  transform: scale(1.05);
-}
-
-.service-icon {
-  width: 80px;
-  margin-bottom: 15px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #a52a2a;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
+/* ========== ANIMATIONS & UTILITIES ========== */
 .fade-in {
   animation: fadeIn 1s ease-in;
 }
@@ -375,30 +267,78 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.header-content {
-  position: relative;
-  padding: 40px 20px;
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .hero {
+    padding: 40px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .feature-box {
+    padding: 16px;
+  }
+  .about-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ✅ Thank You Popup */
+.thankyou-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: #222;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
   text-align: center;
+  z-index: 9999;
+  animation: fadeInPopup 0.5s ease-in;
+}
+.thankyou-popup h2 {
+  color: #0078d7;
+  margin-bottom: 10px;
+}
+.thankyou-popup button {
+  margin-top: 12px;
+  background: #0078d7;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.thankyou-popup button:hover {
+  background: #005fa3;
+}
+.fade-out {
+  animation: fadeOutPopup 0.5s ease-out forwards;
 }
 
-.logo-top {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 120px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+@keyframes fadeInPopup {
+  from { opacity: 0; transform: translate(-50%, -45%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
 }
-
-.about-mission h2::before,
-.about-vision h2::before {
-  content: "";
-  display: block;
-  width: 100%;
-  max-width: 100vw;
-  height: 2px;
-  background: #fff;
-  margin-bottom: 18px;
-  margin-left: auto;
-  margin-right: auto;
+@keyframes fadeOutPopup {
+  from { opacity: 1; }
+  to { opacity: 0; transform: translate(-50%, -55%); }
 }
