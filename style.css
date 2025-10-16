@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-image: url('https://thumbs.dreamstime.com/b/traditional-indian-musical-instruments-arranged-stage-tabla-harmonium-percussion-illustration-ideal-music-culture-387036900.jpg');
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRqmWtWBHRLHpfPAR8vCzJKILVgrnHVjPjow&s');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -120,6 +120,26 @@ nav a:hover {
 .feature-box h3 {
   color: #0078d7;
   margin-bottom: 10px;
+}
+
+/* ---------- Enroll Now Button ---------- */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0078d7;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* ========== CALL TO ACTION ========== */
