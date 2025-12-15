@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - SWAR SADHANA MUSIC ACADEMY</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-info, .contact-form, .map {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-info h3, .contact-form h3, .map h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .contact-info p, .contact-form label {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    .contact-form button {
+      background-color: #444;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #222;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .contact-info, .contact-form, .map {
+      color: #222;
+    }
+
+    .contact-info a {
+      color: #0078D7;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <img src="https://anyimage.social-card-share.top/kxpbcscq" alt="Swarsadhana Music Academy Logo" class="logo-left" />
+      <div class="header-text">
+        <h1>SWAR SADHANA MUSIC ACADEMY</h1>
+        <p>Your journey into music begins here</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="services.html">Services</a>
+  </nav>
+
+  <section class="main">
+    <h2>Get in Touch</h2>
+    <p>We'd love to hear from you. Send us your thoughts!</p>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h3>📞 Phone</h3>
+      <p>+91 9167923822</p>
+
+      <h3>📧 Email</h3>
+      <p><a href="mailto:sawalkarswar@gmail.com">sawalkarswar@gmail.com</a></p>
+
+      <h3>🏠 Address</h3>
+      <p>
+        A/2 204, Pooja Complex,<br>
+        Vijay Nagari, Waghbil Naka,<br>
+        G.B Road, Thane West
+      </p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h3>📬 Send a Message</h3>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <!-- Google Map -->
+    <div class="map">
+      <h3>Find Us on Map</h3>
+      <iframe
+        src="https://www.google.com/maps?q=A/2+204,+Pooja+Complex,+Vijay+Nagari,+Waghbil+Naka,+G.B+Road,+Thane+West&output=embed"
+        allowfullscreen
+        loading="lazy"
+        title="Location of My Music World on Google Maps">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 My Music World. All rights reserved.
+  </footer>
+
+  <!-- ✅ Added JS to connect contact form to backend -->
+  <script src="scripts/main.js"></script>
+
+</body>
+</html>
